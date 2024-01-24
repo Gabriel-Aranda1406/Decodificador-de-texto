@@ -1,0 +1,23 @@
+.title {
+    font-family: monospace;
+    font-size: 30px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/*mexer na classe logo*/
+/*mexer na classe girl*/
+
+.btn1{
+    background-color: cornflowerblue ; /* Red */
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn2 {
+    background-color: crimson;
+    border-radius: 10px;
+    cursor: pointer;
+}
