@@ -1,14 +1,19 @@
 
 body {
     background-color: black;
+    margin: 0;
+    font-family: monospace;
 }
 
 .container {
-    display: inline-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
 }
 
 .container .dinamico {
-    margin-left: 15px;
+    margin-top: 15px;
     line-height: 90px;
     height: 90px;
     overflow: hidden;
@@ -17,7 +22,6 @@ body {
 .dinamico li{
     color: green;
     list-style: none;
-    font-family: monospace;
     font-size: 60px;
     font-weight: 800;
     left: 0;
@@ -38,12 +42,8 @@ body {
     height: 100%;
     left: 0;
     border-left: 2px solid green;
-    animation: typing 1.6s steps(10) infinite;
+    animation: typing 1.5s steps(10) infinite;
     background: black;
-}
-
-.dinamico li span {
-    position: relative;
 }
 
 @keyframes typing{
@@ -55,12 +55,10 @@ body {
 
 .subtitle {
     color: green;
-    font-family: monospace;
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 800;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
 }
 
 
@@ -69,6 +67,7 @@ body {
     position: absolute;
     top: 15px;
     right: 0;
+    max-width: 100%;
 }
 
 .girl {
@@ -82,9 +81,10 @@ body {
     background-color: rgb(41, 41, 41);
     padding: 16px 24px;
     border-radius: 5px;
-    font-family: monospace;
-    font-size: 20px;
-    font-weight: 900;
+    font-size: 16px;
+    font-weight: 700;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .btn-container {
@@ -100,6 +100,7 @@ body {
    align-items: center;
    justify-content: center;
    text-align: center;
+   margin-top: 10px;
 }
 
 .btn{
@@ -109,6 +110,8 @@ body {
     font-size: 16px;
     font-weight: 700;
     margin: 0 15px;
+    width: 100%; /* Caso que queira os botões com outro tamanho, retiro isso */
+    box-sizing: border-box;
 }
 
 .btn-criptografar{
@@ -130,6 +133,7 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .footer-text {
