@@ -17,8 +17,9 @@ body {
 .dinamico li{
     color: green;
     list-style: none;
+    font-family: monospace;
     font-size: 60px;
-    font-weight: 500;
+    font-weight: 800;
     left: 0;
     position: relative;
     top: 0;
@@ -37,7 +38,7 @@ body {
     height: 100%;
     left: 0;
     border-left: 2px solid green;
-    animation: typing 1.5s steps(10) infinite;
+    animation: typing 1.6s steps(10) infinite;
     background: black;
 }
 
@@ -62,6 +63,8 @@ body {
     justify-content: center;
 }
 
+
+
 .logo {
     position: absolute;
     top: 15px;
@@ -74,14 +77,29 @@ body {
     right: 0;
 }
 
-
+#textarea {
+    color: green;
+    background-color: rgb(41, 41, 41);
+    padding: 16px 24px;
+    border-radius: 5px;
+    font-family: monospace;
+    font-size: 20px;
+    font-weight: 900;
+}
 
 .btn-container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: flex;
+}
+
+.btn-group {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
 }
 
 .btn{
@@ -101,4 +119,19 @@ body {
 .btn-descriptografar{
     top: 60%;
     left: 50%;
+}
+
+.footer {
+    background-color: #333; /* Cinza escuro */
+    color: green;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.footer-text {
+    margin: 0;
 }
