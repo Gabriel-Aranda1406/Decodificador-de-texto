@@ -1,8 +1,17 @@
+@font-face {
+    font-family: 'Hack';
+    src: url('fonts/Perfect\ DOS\ VGA\ 437.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
+* {
+    font-family: 'Hack';
+}
 body {
     background-color: black;
     margin: 0;
-    font-family: monospace, serif;
+    font-family: 'Hack';
 }
 
 body::before {
@@ -22,11 +31,15 @@ body::before {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+
 }
 
 .container .dinamico {
-    margin-top: 15px;
+    margin-left: 15px;
     line-height: 90px;
     height: 90px;
     overflow: hidden;
@@ -55,7 +68,7 @@ body::before {
     height: 100%;
     left: 0;
     border-left: 2px solid rgb(14, 207, 14);
-    animation: typing 1.5s steps(10) infinite;
+    animation: typing 1.5s steps(100) infinite;
 }
 
 @keyframes typing{
@@ -79,7 +92,6 @@ body::before {
     position: absolute;
     top: 15px;
     right: 0;
-    max-width: 100%;
 }
 
 
