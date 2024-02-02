@@ -158,3 +158,58 @@ body::before {
 .footer-text {
     margin: 0;
 }
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .container {
+        margin: 0;
+        padding: 0;
+        justify-content: flex-start;
+        height: auto;
+    }
+
+    .container .dinamico {
+        margin: 0;
+        padding: 0;
+        justify-content: flex-start;
+    }
+
+    .logo {
+        position: fixed;
+        bottom: 40px;
+        right: 10px;
+        margin-top: auto;
+    }
+
+}
+
+@media (max-width: 400px) {
+    body {
+        flex-direction: column;
+    }
+
+    .container {
+        margin: 0;
+        padding: 0;
+        justify-content: flex-start;
+        height: auto;
+    }
+
+    .container .dinamico {
+        margin: 0;
+        padding: 0;
+        justify-content: flex-start;
+    }
+
+    .logo {
+        position: fixed;
+        bottom: 40px;
+        right: 10px;
+        margin-top: auto;
+    }
+
+}
+
