@@ -1,38 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decodificador de Texto</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
+
 <body>
-    <div class="container">
-            <ul class="dinamico">
-                <li><span>SECRET CODE</span></li>
-                <li><span>???????????</span></li>
-                <li><span>S3CR3T C0D3</span></li>
-                <li><span>???????????</span></li>
-            </ul>
-    </div>
-    
+    <header>
+        <h1>Secret Code</h1>
+    </header>
+    <dialog id="modal">
+        <p id="dialog-text"></p>
+        <button id="dialog-close" class="button">Fechar</button>
+    </dialog>
+
     <img class="logo" src="img/Frame 6.png" alt="Logo Alura">
 
-    
-    
-    <div class="btn-container">
-        <h2 class="subtitle">Digite seu texto</h2>
-        <label><textarea name="textarea" id="textarea" rows="10" cols="50" placeholder="Digite o texto aqui"></textarea></label>
-    
-        <div class="btn-group">
-            <button class="btn btn-criptografar">Criptografar</button>
-            <button class="btn btn-descriptografar">Descriptografar</button>
-        </div>
 
-    </div>
-    
+    <main>
+        <section>
+            <div class="textinput">
+                <label><textarea  id="textarea" rows="10" cols="30"
+                        placeholder="Insira o texto aqui"></textarea></label>
+                <div class="buttons">
+                    <button class="button" id="cripto">Criptografar</button>
+                    <button class="button" id="decripto">Descriptografar</button>
+                </div>
+            </div>
+        </section>
+        <aside>
+            <div class="show-content">
+                <textarea id="content-textarea" cols="10" rows="30"></textarea>
+                <img src="" alt="">
+                <button class="button" id="copy-button">Copiar Texto</button>
+            </div>
+            <div class="no-content">
+                <img src="" alt="">
+                <h3>Nenhuma mensagem encontrada</h3>
+                <p>Digite um texto que deseja criptografar ou descriptografar</p>
+            </div>
+        </aside>
+    </main>
+
     <footer class="footer">
-        <p class="footer-text">Gabriel Aranda - 2024</p>
+       <section class="links">
+        <h3>Gabriel Aranda</h3>
+            <ul>
+                <li> 
+                    <a href="https://github.com/Gabriel-Aranda1406" target="_blank">
+                        <i class="bi bi-github"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://linkedin.com/in/gabriel-arandaa/" target="_blank"> <i class="bi bi-linkedin"></i>
+                    </a>
+                </li>
+            </ul>
+       </section>
+
+       <hr>
+       <p>Gabriel Aranda - 2024</p>
+       <p>Projeto Oracle Next Education/Alura</p>
     </footer>
 </body>
 </html>

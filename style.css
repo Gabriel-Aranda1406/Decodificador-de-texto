@@ -5,87 +5,91 @@
     font-style: normal;
 }
 
+:root {
+    --bg-color: #313447;
+    --text-color: black;
+    --placeholder-color: #ffffffb0;
+    --border-color: #fff;
+    --hover-color: rgba(255, 255, 255, 0.5);
+
+    --bt-primary-color: transparent;
+    --bt-border: #FFF;
+
+    --bt-border-hover: white;
+    --bt-hover-color: rgb(14, 207, 14);
+    --bt-text-hover: rgb(14, 207, 14);
+
+}
+
 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Hack';
 }
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
 body {
-    background-color: black;
-    margin: 0;
-    font-family: 'Hack';
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    position: relative;
 }
 
 body::before {
-    background-image: url("img/24382413_v627-aew-01-technologybackground.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     content: "";
-    display: block;
-    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    filter: blur(4px);
+    z-index: -1;
+    background-image: url("img/24382413_v627-aew-01-technologybackground.jpg");
+    background-size: cover;
+    filter: blur(5px); /* Ajuste o valor de blur conforme necessário */
 }
 
-.container {
+
+header {
+    width: 100%;
+    height: 10%;
+    padding: 10px 30px;
+}
+
+header h1 {
+    color: rgb(14, 207, 14);
+    width: fit-content;
+    border-bottom: 0 solid rgb(14, 207, 14);
+}
+
+main {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 10px;
+}
+
+main section {
+    width: 50%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 20px;
-
+    border: 1.2px solid rgb(14, 207, 14);
 }
 
-.container .dinamico {
-    margin-left: 15px;
-    line-height: 90px;
-    height: 90px;
-    overflow: hidden;
+main section:hover, aside:hover {
+    -webkit-box-shadow: 0px 0px 9px 1px var(--hover-color);
+    -moz-box-shadow: 0px 0px 9px 1px var(--hover-color);
+    box-shadow: 0px 0px 9px 1px var(--hover-color);
 }
-
-.dinamico li{
-    color: rgb(14, 207, 14);
-    list-style: none;
-    font-size: 60px;
-    font-weight: 800;
-    left: 0;
-    position: relative;
-    top: 0;
-    animation: slide 6s steps(4) infinite;
-}
-@keyframes slide {
-    100%{
-        top: -360px;
-    }
-}
-
-.dinamico li span::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    border-left: 2px solid rgb(14, 207, 14);
-    animation: typing 1.5s steps(100) infinite;
-}
-
-@keyframes typing{
-    100% {
-        left: 100%;
-        margin: 0 -35px 0 35px;
-    }
-}
-
-.subtitle {
-    color: rgb(14, 207, 14);
-    font-size: 24px;
-    font-weight: 800;
-    text-align: center;
-    margin-top: 20px;
-}
-
 
 
 .logo {
@@ -97,119 +101,279 @@ body::before {
 
 #textarea {
     color: rgb(14, 207, 14);
-    background-color: rgb(41, 41, 41);
-    padding: 16px 24px;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: 700;
+    background-color: transparent;
+    padding: 10px;
+    font-size: 25px;
+    border: none;
+    outline: none;
+    resize: none;
     width: 100%;
+    height: 100%;
     box-sizing: border-box;
 }
 
-.btn-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
+.buttons {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
 }
 
-.btn-group {
-   display: flex;
-   flex-direction: row;
-   align-items: center;
-   justify-content: center;
-   text-align: center;
-   margin-top: 10px;
+.button {
+    width: 200px;
+    height: 50px;
+    background:rgb(14, 207, 14);
+    color: black;
+    border: 1px solid rgb(14, 207, 14);
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
 }
 
-.btn{
-    border-radius: 16px;
+.button:hover {
     background: rgb(14, 207, 14);
-    padding: 16px 24px;
-    font-size: 16px;
-    font-weight: 700;
-    margin: 0 15px;
-    width: 100%; /* Caso que queira os botões com outro tamanho, retiro isso */
-    box-sizing: border-box;
+    color: black;
+    border: var(--bt-border-hover);
+    transform: scale(1.2);
 }
 
-.btn-criptografar{
-    top: 50%;
-    left: 50%;
+.button:active {
+    background: rgb(3, 20, 3);
+    color: var(--bt-text-hover);
+    border: var(--bt-border-hover);
 }
 
-.btn-descriptografar{
-    top: 60%;
-    left: 50%;
+main aside {
+    width: 25%;
+    height: 100%;
+    border: 1.2px solid var(--border-color);
+    border-radius: 20px;
+    transition: all 0.6s ease-in-out;
+}
+
+.show-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 50px 10px;
+}
+
+.show-content textarea {
+    width: 98%;
+    height: 30%;
+    background-color: transparent;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    resize: none;
+    padding: 10px;
+    font-size: 25px;
+}
+
+.show-content img {
+    width: 80%;
+}
+
+.no-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.no-content img {
+    width: 80%;
+}
+
+.no-content h3, p {
+    text-align: center;
+    color: white;
+}
+
+.no-content h3 {
+    font-size: 25px;
+}
+
+.no-content p {
+    font-size: 20px;
 }
 
 .footer {
-    background-color: #333; /* Cinza escuro */
-    color: rgb(14, 207, 14);
-    padding: 10px;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    background-color: tr;
     width: 100%;
-    box-sizing: border-box;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 50px;
+    gap: 30px;
 }
 
-.footer-text {
-    margin: 0;
+.footer section {
+    width: 30%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
 
-@media (max-width: 768px) {
-    body {
+
+
+.footer section h3 {
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    border-bottom: 2px solid white;
+}
+
+.footer section ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: max-content;
+    height: max-content;
+}
+
+.footer section ul li {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer section ul i {
+    color: white;
+    font-size: 35px;
+    transition: all 0.1s ease-in-out;
+}
+
+.footer section ul i:hover {
+    font-size: 38px;
+}
+
+.footer hr {
+    width: 1px;
+    height: 30%;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.footer p {
+    text-align: center;
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 1000px) {
+    html, body{
+        min-width: 100vw;
+        min-height: 100%;
+    }
+
+    main {
         flex-direction: column;
+        justify-content: flex-start;
+        height: max-content;
     }
 
-    .container {
-        margin: 0;
-        padding: 0;
-        justify-content: flex-start;
+    main section {
+        width: 90%;
+        height: fit-content;
+        gap: 5px;
+    }
+
+    .button {
+        width: 150px;
+        height: 50px;
+    }
+
+    main aside {
+        width: 90%;
+        height: fit-content;
+    }
+
+    .no-content {
+        height: fit-content;
+    }
+
+    .no-content img {
+        display: none;
+    }
+
+    .show-content {
         height: auto;
+        padding: 10px;
+        justify-content: center;
+        gap: 5px;
     }
 
-    .container .dinamico {
-        margin: 0;
-        padding: 0;
-        justify-content: flex-start;
+    .show-content textarea {
+        height: 300px;
     }
 
-    .logo {
-        position: fixed;
-        bottom: 40px;
-        right: 10px;
-        margin-top: auto;
+    .show-content button {
+        width: 150px;
+    }
+
+    .show-content img {
+        display: none;
+    }
+
+    .footer {
+        position: relative
+    }
+
+    /* footer hr {
+        display: none;
+    } */
+
+    .footer section ul li {
+        width: fit-content;
+        height: fit-content;
+    }
+
+    .footer section ul i {
+        font-size: 25px;
+    }
+
+    /* footer p {
+        display: none;
+    } */
+}
+
+@media only screen and (max-width: 700px) {
+    main {
+        padding-bottom: 10px;
+    }
+    
+    footer {
+        position: relative;
+        padding: 5px;
+    }
+
+    footer hr {
+        display: none;
+    }
+
+    footer p {
+        display: none;
     }
 }
 
 
-@media (max-width: 400px) {
-    body {
-        flex-direction: column;
-    }
-
-    .container {
-        margin: 0;
-        padding: 0;
-        justify-content: flex-start;
-        height: auto;
-    }
-
-    .container .dinamico {
-        margin: 0;
-        padding: 0;
-        justify-content: flex-start;
-    }
-
-    .logo {
-        position: fixed;
-        bottom: 40px;
-        right: 10px;
-        margin-top: auto;
-    }
-
-}
-
+/* falta o textinput e o #modal. Código salvo na pasta do edge ORACLE NEXT EDUCATION
